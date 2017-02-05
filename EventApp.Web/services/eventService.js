@@ -39,7 +39,7 @@
                 data: event,
                 headers: {
                     "Accept": "text/html"
-                }
+                } 
               })
                 .then(function (response) {
                     return response.data;
