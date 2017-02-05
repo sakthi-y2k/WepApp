@@ -1,0 +1,40 @@
+﻿<div ng-show="!isEditable">
+    <div>
+        <span>Event Id</span>
+        <span>{{ event.eventId }}</span>
+    </div>
+
+    <div>
+        <span>Event Name</span>
+        <span>{{ event.name }}</span>
+    </div>
+
+    <div ng-repeat="slot in event.slots">
+        <span>Slot Id</span>
+        <span>{{ slot.slotId }}</span>
+        <span>Slot Name</span>
+        <span>{{ slot.name }}</span>
+    </div>
+</div>
+
+<div ng-show="isEditable">
+    <div>
+        <span>Event Id</span>
+        <span>{{ event.eventId }}</span>
+    </div>
+
+    <div>
+        <span>Event Name</span>
+        <input type="text" ng-model="event.name"/>
+    </div>
+
+    <div ng-repeat="slot in event.slots">
+        <span>Slot Id</span>
+        <span>{{ slot.slotId }}</span>
+        <span>Slot Name</span>
+        <input type="text" ng-model="slot.name" />
+    </div>
+    <div><span ng-click="save()">Save</span></div>
+</div>
+
+<div><span ng-click="isEditable=true">Edit</span></div>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html ng-app="EventApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/eventController.js"></script>
+    <script src="services/eventService.js"></script>
+    <base href="http://localhost/EventApp/"/>
+</head>
+<body ng-controller="MainController">
+    <div><ul><li><a ng-href="events">Events</a></li></ul></div>
+    <div>{{ msg }}</div>
+    <div ng-view></div>
+</body>
+</html>
